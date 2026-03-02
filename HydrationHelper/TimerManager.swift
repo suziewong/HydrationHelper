@@ -53,9 +53,11 @@ class TimerManager: ObservableObject {
     }
     
     /// Updates the timer interval and saves to UserDefaults
-    /// - Parameter minutes: New interval in minutes (45, 60, or 90)
+    /// - Parameter minutes: New interval in minutes (1-480)
     func setInterval(minutes: Int) {
-        intervalMinutes = minutes
+        // Validate interval bounds (1-480 minutes = 8 hours max)
+        let validatedMinutes = max(1, min(480, minutes))
+        intervalMinutes = validatedMinutes
         saveIntervalToStorage()
         resetTimer()
     }

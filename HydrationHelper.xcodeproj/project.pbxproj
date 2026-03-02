@@ -1,0 +1,197 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09EEAD2F6C5609E7621344B24A6329E2 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB66A96CBFBA310897D464413793993F /* StatusBarController.swift */; };
+		14A818358B2A8921C967F90D58FAC37B /* HydrationHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0423486856A9A6E05AB50B61ED5120E /* HydrationHelperApp.swift */; };
+		1B639A4763021C109BF0088C2AD661B5 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A879C9E2E2E92D83A908D7EE434F26 /* HistoryStore.swift */; };
+		75D70E25E5B5D76071EEBBADDD836842 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E6AF12DA191E4D8137B26F5E7202 /* NotificationManager.swift */; };
+		F968BA98C557837B16C0EF768ECE8107 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231ECAAFCEB03CC77E653AF17352C4F /* TimerManager.swift */; };
+		FC5FBB7970C250C68F47F77D95A12294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25AA04C8573E91248DCCD8D185EB850 /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39D4E6AF12DA191E4D8137B26F5E7202 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		8231ECAAFCEB03CC77E653AF17352C4F /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		9CA6FA372A54BB4F7ABE35892B0FD8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0423486856A9A6E05AB50B61ED5120E /* HydrationHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationHelperApp.swift; sourceTree = "<group>"; };
+		AB66A96CBFBA310897D464413793993F /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		D25AA04C8573E91248DCCD8D185EB850 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D318D4467B6E54CFE10A6EFFBF93968B /* HydrationHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HydrationHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A879C9E2E2E92D83A908D7EE434F26 /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0085C751B6EC7505651AC461464708CF /* HydrationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				D25AA04C8573E91248DCCD8D185EB850 /* ContentView.swift */,
+				F6A879C9E2E2E92D83A908D7EE434F26 /* HistoryStore.swift */,
+				A0423486856A9A6E05AB50B61ED5120E /* HydrationHelperApp.swift */,
+				9CA6FA372A54BB4F7ABE35892B0FD8E4 /* Info.plist */,
+				39D4E6AF12DA191E4D8137B26F5E7202 /* NotificationManager.swift */,
+				AB66A96CBFBA310897D464413793993F /* StatusBarController.swift */,
+				8231ECAAFCEB03CC77E653AF17352C4F /* TimerManager.swift */,
+			);
+			path = HydrationHelper;
+			sourceTree = "<group>";
+		};
+		8458149BA978ED2A001110FFDCEFB34B = {
+			isa = PBXGroup;
+			children = (
+				0085C751B6EC7505651AC461464708CF /* HydrationHelper */,
+				C0442FD6E8DA7D70D993E934C2FF2552 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0442FD6E8DA7D70D993E934C2FF2552 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D318D4467B6E54CFE10A6EFFBF93968B /* HydrationHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1502847C6DC0A6754DDA10A855369653 /* HydrationHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB6CF34AA146AA2E241A3C4835CAA41C /* Build configuration list for PBXNativeTarget "HydrationHelper" */;
+			buildPhases = (
+				1F10A5C95FEB3BFC609029F6B3056123 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HydrationHelper;
+			productName = HydrationHelper;
+			productReference = D318D4467B6E54CFE10A6EFFBF93968B /* HydrationHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3A61513F4779FE132719640B2B1DEE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 6BEBD057E260DAFADC6828E35088C349 /* Build configuration list for PBXProject "HydrationHelper" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8458149BA978ED2A001110FFDCEFB34B;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1502847C6DC0A6754DDA10A855369653 /* HydrationHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F10A5C95FEB3BFC609029F6B3056123 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC5FBB7970C250C68F47F77D95A12294 /* ContentView.swift in Sources */,
+				1B639A4763021C109BF0088C2AD661B5 /* HistoryStore.swift in Sources */,
+				14A818358B2A8921C967F90D58FAC37B /* HydrationHelperApp.swift in Sources */,
+				75D70E25E5B5D76071EEBBADDD836842 /* NotificationManager.swift in Sources */,
+				09EEAD2F6C5609E7621344B24A6329E2 /* StatusBarController.swift in Sources */,
+				F968BA98C557837B16C0EF768ECE8107 /* TimerManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		015696EADFD3BA56823A97B846BEC3C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2390AAFBBA2801EB8EA59564A35E35B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7282BFE5BBB4D57C42AE4DD884C2FD7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HydrationHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HydrationHelper;
+				PRODUCT_NAME = HydrationHelper;
+			};
+			name = Debug;
+		};
+		EEAF6E11499E19B907198FD2666A511B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HydrationHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.HydrationHelper;
+				PRODUCT_NAME = HydrationHelper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BEBD057E260DAFADC6828E35088C349 /* Build configuration list for PBXProject "HydrationHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015696EADFD3BA56823A97B846BEC3C7 /* Debug */,
+				2390AAFBBA2801EB8EA59564A35E35B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DB6CF34AA146AA2E241A3C4835CAA41C /* Build configuration list for PBXNativeTarget "HydrationHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7282BFE5BBB4D57C42AE4DD884C2FD7B /* Debug */,
+				EEAF6E11499E19B907198FD2666A511B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3A61513F4779FE132719640B2B1DEE2 /* Project object */;
+}

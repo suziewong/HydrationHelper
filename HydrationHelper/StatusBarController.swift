@@ -12,14 +12,17 @@ class StatusBarController: NSObject {
     private var statusItem: NSStatusItem
     private var popover: NSPopover
     private var contentView: ContentView
+    private var eventMonitor: Any?
     
     override init() {
         // Create status bar item with variable length
-        statusItem = NSStatusBar.shared.statusItem(withLength: NSStatusItem.variableLength)
+        statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+        print("HydrationHelper: StatusBarController.init - statusItem created: \(statusItem)")
         
         // Initialize popover
         popover = NSPopover()
         popover.behavior = .transient
+        popover.contentSize = NSSize(width: 300, height: 400)
         
         // Create content view with timer manager
         let timerManager = TimerManager.shared
@@ -29,16 +32,32 @@ class StatusBarController: NSObject {
         super.init()
         
         setupStatusBar()
+        setupEventMonitor()
+    }
+    
+    deinit {
+        if let eventMonitor = eventMonitor {
+            NSEvent.removeMonitor(eventMonitor)
+        }
     }
     
     /// Configures the status bar icon and action
     private func setupStatusBar() {
         if let button = statusItem.button {
+            print("HydrationHelper: setupStatusBar - status bar button exists")
             // Use water drop emoji as icon
             button.title = "💧"
             button.font = NSFont.systemFont(ofSize: 16)
             button.action = #selector(togglePopover)
             button.target = self
+        }
+    }
+    
+    private func setupEventMonitor() {
+        eventMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown]) { [weak self] _ in
+            if self?.popover.isShown == true {
+                self?.closePopover()
+            }
         }
     }
     
@@ -55,6 +74,7 @@ class StatusBarController: NSObject {
     private func showPopover() {
         if let button = statusItem.button {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
+            NSApp.activate(ignoringOtherApps: true)
         }
     }
     
