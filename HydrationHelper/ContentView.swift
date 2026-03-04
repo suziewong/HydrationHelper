@@ -76,26 +76,35 @@ struct ContentView: View {
     }
     
     private var controlButtonsView: some View {
-        HStack(spacing: 12) {
-            Button(action: {
-                if timerManager.isRunning {
-                    timerManager.pauseTimer()
-                } else {
-                    timerManager.startTimer()
+        VStack(spacing: 12) {
+            HStack(spacing: 12) {
+                Button(action: {
+                    if timerManager.isRunning {
+                        timerManager.pauseTimer()
+                    } else {
+                        timerManager.startTimer()
+                    }
+                }) {
+                    Text(timerManager.isRunning ? "暂停" : "开始")
+                        .frame(maxWidth: .infinity)
                 }
-            }) {
-                Text(timerManager.isRunning ? "暂停" : "开始")
-                    .frame(maxWidth: .infinity)
+                .buttonStyle(.borderedProminent)
+                
+                Button(action: {
+                    timerManager.resetTimer()
+                }) {
+                    Text("重置")
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.bordered)
             }
-            .buttonStyle(.borderedProminent)
             
-            Button(action: {
-                timerManager.resetTimer()
-            }) {
-                Text("重置")
+            Button(action: testNotification) {
+                Label("测试通知", systemImage: "bell.fill")
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.bordered)
+            .tint(.blue)
         }
     }
     
@@ -230,6 +239,11 @@ struct ContentView: View {
     private func quitApp() {
         NSApplication.shared.terminate(nil)
     }
+    
+    /// Sends a test notification immediately
+    private func testNotification() {
+        NotificationManager.shared.sendHydrationReminder()
+    }
 }
 
 /// Helper struct for quick interval buttons
@@ -250,6 +264,4 @@ struct QuickIntervalButton: View {
     }
 }
 
-#Preview {
-    ContentView(timerManager: TimerManager.shared)
-}
+

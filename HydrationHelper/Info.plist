@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>HydrationHelper</string>
+	<string>喝水提醒</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -28,5 +28,7 @@
 	<true/>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSUserNotificationUsageDescription</key>
+	<string>喝水提醒需要发送通知来提醒您定期喝水，保持身体水分充足。</string>
 </dict>
 </plist>

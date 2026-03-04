@@ -11,6 +11,7 @@
 		14A818358B2A8921C967F90D58FAC37B /* HydrationHelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0423486856A9A6E05AB50B61ED5120E /* HydrationHelperApp.swift */; };
 		1B639A4763021C109BF0088C2AD661B5 /* HistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A879C9E2E2E92D83A908D7EE434F26 /* HistoryStore.swift */; };
 		75D70E25E5B5D76071EEBBADDD836842 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4E6AF12DA191E4D8137B26F5E7202 /* NotificationManager.swift */; };
+		9A9ACA1BAA8C7B2D5BDF366B1FC8BB70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B15333387D25CBF9FD1D8EC113FD4440 /* Assets.xcassets */; };
 		F968BA98C557837B16C0EF768ECE8107 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231ECAAFCEB03CC77E653AF17352C4F /* TimerManager.swift */; };
 		FC5FBB7970C250C68F47F77D95A12294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25AA04C8573E91248DCCD8D185EB850 /* ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -21,6 +22,7 @@
 		9CA6FA372A54BB4F7ABE35892B0FD8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0423486856A9A6E05AB50B61ED5120E /* HydrationHelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationHelperApp.swift; sourceTree = "<group>"; };
 		AB66A96CBFBA310897D464413793993F /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		B15333387D25CBF9FD1D8EC113FD4440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D25AA04C8573E91248DCCD8D185EB850 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D318D4467B6E54CFE10A6EFFBF93968B /* HydrationHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HydrationHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A879C9E2E2E92D83A908D7EE434F26 /* HistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStore.swift; sourceTree = "<group>"; };
@@ -30,6 +32,7 @@
 		0085C751B6EC7505651AC461464708CF /* HydrationHelper */ = {
 			isa = PBXGroup;
 			children = (
+				B15333387D25CBF9FD1D8EC113FD4440 /* Assets.xcassets */,
 				D25AA04C8573E91248DCCD8D185EB850 /* ContentView.swift */,
 				F6A879C9E2E2E92D83A908D7EE434F26 /* HistoryStore.swift */,
 				A0423486856A9A6E05AB50B61ED5120E /* HydrationHelperApp.swift */,
@@ -65,6 +68,7 @@
 			buildConfigurationList = DB6CF34AA146AA2E241A3C4835CAA41C /* Build configuration list for PBXNativeTarget "HydrationHelper" */;
 			buildPhases = (
 				1F10A5C95FEB3BFC609029F6B3056123 /* Sources */,
+				62FDACB22BA80D13EC272C646202FDA0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -98,6 +102,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62FDACB22BA80D13EC272C646202FDA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A9ACA1BAA8C7B2D5BDF366B1FC8BB70 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F10A5C95FEB3BFC609029F6B3056123 /* Sources */ = {
@@ -151,7 +166,7 @@
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.HydrationHelper;
-				PRODUCT_NAME = HydrationHelper;
+				PRODUCT_NAME = "喝水提醒";
 			};
 			name = Debug;
 		};
@@ -166,7 +181,7 @@
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.HydrationHelper;
-				PRODUCT_NAME = HydrationHelper;
+				PRODUCT_NAME = "喝水提醒";
 			};
 			name = Release;
 		};
