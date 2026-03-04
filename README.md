@@ -10,7 +10,7 @@ A simple and elegant macOS menu bar app that reminds you to stay hydrated throug
 
 - **Menu Bar Integration**: Lives in your macOS status bar with a water drop icon 💧
 - **Customizable Timer**: Set reminders for 45, 60, or 90 minutes
-- **System Notifications**: Native macOS notifications when it's time to drink
+- **Reliable Notifications**: Multiple notification methods (UNUserNotificationCenter, NSUserNotificationCenter, AppleScript) to ensure you never miss a reminder
 - **Hydration History**: Track your daily and total water intake
 - **Persistent Settings**: Your preferences are saved automatically
 - **Clean UI**: Minimalist design following macOS Human Interface Guidelines
@@ -65,7 +65,10 @@ open HydrationHelper.xcodeproj
 ### Architecture
 - **SwiftUI**: Modern declarative UI framework
 - **AppKit**: Status bar integration via `NSStatusBar`
-- **UserNotifications**: Native notification delivery
+- **Multiple Notification Methods**:
+  - **UNUserNotificationCenter**: Modern macOS notification API (preferred)
+  - **NSUserNotificationCenter**: Legacy notification API (backup)
+  - **AppleScript**: Fallback method to ensure notifications always work
 - **UserDefaults**: Lightweight data persistence
 - **Combine**: Reactive programming for timer updates
 
@@ -77,7 +80,23 @@ HydrationHelper/
 ├── StatusBarController.swift     # Menu bar management
 ├── TimerManager.swift            # Countdown logic
 ├── NotificationManager.swift     # System notifications
-└── HistoryStore.swift            # Data persistence
+├── HistoryStore.swift            # Data persistence
+└── Assets.xcassets/              # App icons and assets
+```
+
+### Support Scripts
+```
+HydrationHelper/
+├── test_notification.py          # Test notification functionality
+├── force_notification_permission.py # Force notification permission request
+├── debug_notification.py         # Debug notification issues
+├── diagnose_notification.py      # Diagnose notification problems
+├── fix_notification.sh           # Fix notification permissions
+├── fix_notification_permission.sh # Fix notification permissions
+├── reinstall_app.sh              # Reinstall the app
+├── run_and_monitor.sh            # Run app and monitor logs
+├── test_app.sh                   # Comprehensive app test
+└── generate_icons.py             # Generate app icons
 ```
 
 ## 🤝 Contributing
